@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UrbanHarmony | Music School & Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page-container">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="brand">
+            <h1>UrbanHarmony</h1>
+            <span class="tagline">Music • Creativity • Excellence</span>
+        </div>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="#lessons">Lessons</a></li>
+                <li><a href="#studio">Studio</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#" class="btn-nav" id="open-booking">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Where Music Comes Alive</h2>
+                <p>Professional music lessons and recording studio services designed for artists of all levels.</p>
+                <a href="#lessons" class="btn-primary">Explore Programs</a>
+            </div>
+        </section>
+
+        <section id="lessons" class="content-section">
+            <div class="section-grid">
+                <div class="section-image">
+                    <img src="images/piano-lessons.jpg" alt="Piano lesson">
+                </div>
+                <div class="section-text">
+                    <h2>Piano Lessons</h2>
+                    <p>Private and group lessons for beginners to advanced students. We focus on technique, music theory, creativity, and performance mastery.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="studio" class="content-section alt-section">
+            <div class="section-grid">
+                <div class="section-text">
+                    <h2>Recording Studio</h2>
+                    <p>High-end recording sessions with professional sound engineering, acoustic optimization, and industry-grade equipment.</p>
+                </div>
+                <div class="section-image">
+                    <img src="images/recording-session.jpg" alt="Recording session">
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="content-section">
+            <div class="section-grid">
+                <div class="section-image">
+                    <img src="images/live-performance.jpg" alt="Live performance">
+                </div>
+                <div class="section-text">
+                    <h2>Live Performances</h2>
+                    <p>Join our live showcases and concerts to experience music in its most powerful form and build real stage confidence.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="images/footer-logo.jpg" alt="UrbanHarmony logo">
+            <p>&copy; 2026 UrbanHarmony. All rights reserved.</p>
+        </div>
+    </footer>
+
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="modal" id="booking-modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-booking">&times;</span>
+
+        <h2>Book a Session</h2>
+
+        <form class="booking-form">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Service</label>
+                <select>
+                    <option>Piano Lessons</option>
+                    <option>Recording Studio</option>
+                    <option>Live Event Booking</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-primary">Submit Booking</button>
+        </form>
+    </div>
+</div>
+
+<script>
+const openBtn = document.getElementById("open-booking");
+const modal = document.getElementById("booking-modal");
+const closeBtn = document.getElementById("close-booking");
+
+openBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+});
+
+closeBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+});
+
+window.addEventListener("click", function(e) {
+    if (e.target === modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+});
+</script>
+
+</body>
+</html>
