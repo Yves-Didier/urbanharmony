@@ -2,62 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>UrbanHarmony | Music School & Studio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UrbanHarmony is a professional music school and recording studio offering lessons, studio sessions, and live performance opportunities.">
+    <title>UrbanHarmony | Music School & Studio</title>
+
+    <!-- Google Analytics: replace G-XXXXXXXXXX with your real Measurement ID from Google Analytics. -->
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K4JQ4EY55C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K4JQ4EY55C');
+</script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <div class="page-container">
-
-    <!-- HEADER -->
     <header class="header">
         <div class="brand">
             <h1>UrbanHarmony</h1>
             <span class="tagline">Music • Creativity • Excellence</span>
         </div>
 
-        <nav class="navigation">
+        <nav class="navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="#lessons">Lessons</a></li>
                 <li><a href="#studio">Studio</a></li>
                 <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><a href="#" class="btn-nav" id="open-booking">Book Now</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- MAIN -->
-    <main class="main-content">
-
+    <main class="main-content" id="main-content">
         <section class="hero">
             <div class="hero-text">
+                <p class="hero-kicker">Professional Music Training & Recording</p>
                 <h2>Where Music Comes Alive</h2>
-                <p>Professional music lessons and recording studio services designed for artists of all levels.</p>
-                <a href="#lessons" class="btn-primary">Explore Programs</a>
+                <p>UrbanHarmony helps students, singers, instrumentalists, and creators build confidence through lessons, studio production, and live performance experience.</p>
+                <div class="hero-actions">
+                    <a href="#lessons" class="btn-primary">Explore Programs</a>
+                    <a href="#studio" class="btn-secondary">View Studio Services</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section" aria-label="UrbanHarmony highlights">
+            <div>
+                <strong>3+</strong>
+                <span>Core services</span>
+            </div>
+            <div>
+                <strong>Beginner–Advanced</strong>
+                <span>Student levels</span>
+            </div>
+            <div>
+                <strong>Live Demo Ready</strong>
+                <span>GitHub Pages website</span>
             </div>
         </section>
 
         <section id="lessons" class="content-section">
             <div class="section-grid">
                 <div class="section-image">
-                    <img src="images/piano-lessons.jpg" alt="Piano lesson">
+                    <img src="images/piano-lessons.jpg" alt="Instructor giving piano lessons to a student">
                 </div>
                 <div class="section-text">
+                    <p class="section-label">Lessons</p>
                     <h2>Piano Lessons</h2>
-                    <p>Private and group lessons for beginners to advanced students. We focus on technique, music theory, creativity, and performance mastery.</p>
+                    <p>Private and group lessons for beginners to advanced students. Sessions focus on technique, music theory, creativity, ear training, and performance mastery.</p>
+                    <ul class="feature-list">
+                        <li>Personalized learning plans</li>
+                        <li>Beginner-friendly instruction</li>
+                        <li>Performance and theory practice</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section id="studio" class="content-section alt-section">
-            <div class="section-grid">
+            <div class="section-grid reverse-on-mobile">
                 <div class="section-text">
+                    <p class="section-label">Studio</p>
                     <h2>Recording Studio</h2>
-                    <p>High-end recording sessions with professional sound engineering, acoustic optimization, and industry-grade equipment.</p>
+                    <p>Professional recording sessions with sound engineering support, clean vocal capture, acoustic optimization, and production guidance for artists and podcasters.</p>
+                    <ul class="feature-list">
+                        <li>Vocal and instrumental recording</li>
+                        <li>Mixing support</li>
+                        <li>Creative direction for new artists</li>
+                    </ul>
                 </div>
                 <div class="section-image">
-                    <img src="images/recording-session.jpg" alt="Recording session">
+                    <img src="images/recording-session.jpg" alt="Artist recording music in a professional studio">
                 </div>
             </div>
         </section>
@@ -65,48 +107,61 @@
         <section id="events" class="content-section">
             <div class="section-grid">
                 <div class="section-image">
-                    <img src="images/live-performance.jpg" alt="Live performance">
+                    <img src="images/live-performance.jpg" alt="Musician performing live on stage">
                 </div>
                 <div class="section-text">
+                    <p class="section-label">Events</p>
                     <h2>Live Performances</h2>
-                    <p>Join our live showcases and concerts to experience music in its most powerful form and build real stage confidence.</p>
+                    <p>Students and artists can participate in showcases, concerts, and community events to gain real stage confidence and connect with audiences.</p>
+                    <ul class="feature-list">
+                        <li>Student showcases</li>
+                        <li>Community concerts</li>
+                        <li>Artist development events</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
+        <section id="contact" class="contact-section">
+            <div>
+                <p class="section-label">Contact</p>
+                <h2>Ready to start your music journey?</h2>
+                <p>Book a session and choose the service that fits your goal.</p>
+            </div>
+            <button class="btn-primary" id="open-booking-bottom" type="button">Book a Session</button>
+        </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-content">
             <img src="images/footer-logo.jpg" alt="UrbanHarmony logo">
             <p>&copy; 2026 UrbanHarmony. All rights reserved.</p>
+            <p class="footer-note">Final project website deployed with GitHub Pages and Google Analytics.</p>
         </div>
     </footer>
-
 </div>
 
-<!-- BOOKING MODAL -->
-<div class="modal" id="booking-modal">
+<div class="modal" id="booking-modal" aria-hidden="true" role="dialog" aria-labelledby="booking-title">
     <div class="modal-content">
-        <span class="close-btn" id="close-booking">&times;</span>
+        <button class="close-btn" id="close-booking" type="button" aria-label="Close booking form">&times;</button>
 
-        <h2>Book a Session</h2>
+        <h2 id="booking-title">Book a Session</h2>
+        <p class="modal-intro">Complete the form below to request a lesson, studio session, or performance booking.</p>
 
-        <form class="booking-form">
+        <form class="booking-form" id="booking-form">
             <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" required>
+                <label for="full-name">Full Name</label>
+                <input id="full-name" type="text" required>
             </div>
 
             <div class="form-group">
-                <label>Email</label>
-                <input type="email" required>
+                <label for="email">Email</label>
+                <input id="email" type="email" required>
             </div>
 
             <div class="form-group">
-                <label>Service</label>
-                <select>
+                <label for="service">Service</label>
+                <select id="service">
                     <option>Piano Lessons</option>
                     <option>Recording Studio</option>
                     <option>Live Event Booking</option>
@@ -114,30 +169,65 @@
             </div>
 
             <button type="submit" class="btn-primary">Submit Booking</button>
+            <p class="form-message" id="form-message" role="status"></p>
         </form>
     </div>
 </div>
 
 <script>
 const openBtn = document.getElementById("open-booking");
+const openBottomBtn = document.getElementById("open-booking-bottom");
 const modal = document.getElementById("booking-modal");
 const closeBtn = document.getElementById("close-booking");
+const bookingForm = document.getElementById("booking-form");
+const formMessage = document.getElementById("form-message");
 
-openBtn.addEventListener("click", function(e) {
-    e.preventDefault();
+function openModal(event) {
+    if (event) event.preventDefault();
     modal.style.display = "flex";
+    modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
-});
 
-closeBtn.addEventListener("click", function() {
+    if (typeof gtag === "function") {
+        gtag("event", "open_booking_modal", {
+            event_category: "engagement",
+            event_label: "Book Now"
+        });
+    }
+}
+
+function closeModal() {
     modal.style.display = "none";
+    modal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "auto";
-});
+}
+
+openBtn.addEventListener("click", openModal);
+openBottomBtn.addEventListener("click", openModal);
+closeBtn.addEventListener("click", closeModal);
 
 window.addEventListener("click", function(e) {
     if (e.target === modal) {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
+        closeModal();
+    }
+});
+
+window.addEventListener("keydown", function(e) {
+    if (e.key === "Escape" && modal.style.display === "flex") {
+        closeModal();
+    }
+});
+
+bookingForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    formMessage.textContent = "Thank you. Your booking request has been received for demo purposes.";
+    bookingForm.reset();
+
+    if (typeof gtag === "function") {
+        gtag("event", "submit_booking_form", {
+            event_category: "lead",
+            event_label: "Booking Form"
+        });
     }
 });
 </script>
